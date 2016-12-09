@@ -2,11 +2,177 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet/less" href="/less/style.less">
+    <script src="js/less.js-2.7.1/dist/less.js"></script>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+   <div class="site-wrapper">
+    <header>
+      
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Информация</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Фото и видео</a>
+            </li>
+            <div class="logo">
+              <img src="img/logo.png" width="138" height="70" alt="Седона">
+            </div>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="#">Карта штата</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="main-nav-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      
+    </header>
+    <main>
+      <div class="welcome-to-sedona">
+        <img src="img/welcome.png" width="458" height="352" alt="Welcome">
+      </div>
+      
+      <h1>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+      <article class="advantages">
+        <h2 class="advantages-title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+        <section class="advantages-item">
+          <div class="advantages-item-description">
+            <h3 class="advantages-item-title">Настоящий<br> городок</h3>
+            <span class="advantages-number">№1</span>
+            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <div class="advantages-item-image first-reason"></div>
+        </section>
+        <section class="advantages-points">
+          <div class="advantages-points-item">
+            <div class="advantages-points-item-icon accommodation-icon"></div> 
+            <h3 class="advantages-points-title">Жилье</h3>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </div>
+          <div class="advantages-points-item">
+            <div class="advantages-points-item-icon food-icon"></div> 
+            <h3 class="advantages-points-title">Еда</h3>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </div>
+          <div class="advantages-points-item">
+            <div class="advantages-points-item-icon presents-icon"></div> 
+            <h3 class="advantages-points-title">Сувениры</h3>
+            <p>Не только китайского, но и местного производства!</p>
+          </div>
+        </section>
+        <section class="advantages-item">
+         <div class="advantages-item-image second-reason"></div>
+          <div class="advantages-item-description">
+            <h3 class="advantages-item-title">Там есть<br> мост дьявола</h3>
+            <span class="advantages-number">№2</span>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
+        </section>
+        <section class="advantages-item-reasons">
+          <div class="advantages-item-reasons-block">
+            <h3>Небольшая<br> площадь</h3>
+            <span class="advantages-number">№3</span>
+            <p>Все достопримечательности<br> находятся очень близко</p>
+          </div>
+          <div class="advantages-item-reasons-block">
+            <h3>Красивая<br> дорога</h3>
+            <span class="advantages-number">№4</span>
+            <p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+          </div>
+          <div class="advantages-item-reasons-block">
+            <h3>Мало<br> туристов</h3>
+            <span class="advantages-number">№5</span>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
+        </section>
+      </article>
+      <section class="client-contacts">
+        <h2 class="client-contacts-title">Заинтересовались?</h2>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="search-btn" type="button">Поиск гостиницы в Седоне</button>
+        <div class="popup-container">
+          <form class="popup-form" action="https://sedona.ru" method="post">
+            <div class="arrive-date">
+              <label for="arrive-date">Дата заезда:</label>
+              <input type="text" name="arrive-date" id="arrive-date"><span class="calendar-icon"></span>
+            </div>
+            <div class="exit-date">
+             <label for="exit-date">Дата выезда:</label>
+             <input type="text" name="exit-date" id="exit-date"><span class="calendar-icon"></span>
+            </div>
+            <div class="amount">
+            <div class="amount-adult">
+              <label for="amount-adult">Взрослые:</label>
+              <input type="number" name="amount-adult" id="amount-adult"><span class="amount-plus"></span>
+            </div>
+            <div class="amount-child">
+              <label for="amount-child">Дети:</label>
+              <input type="number" name="amount-child" id="amount-child"><span class="amount-plus"></span>
+            </div>
+            </div>
+             <button class="btn" type="submit">Найти</button>
+          </form>
+        </div>
+      </section>
+      <div class="map"></div>
+    </main>
+    <footer>
+      <div class="hashtag">#visitsedona</div>
+      <div class="social">
+        <a class="social-btn social-tw" href="#"></a>
+        <a class="social-btn social-fb" href="#"></a>
+        <a class="social-btn social-youtube" href="#"></a>
+      </div>
+      <div class="developer">
+        Website by<a class="developer-btn" href="https://htmlacademy.ru"></a>
+      </div>
+    </footer>
+   </div>
+   <script src="js/script.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
